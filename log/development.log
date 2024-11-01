@@ -180,3 +180,88 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 21688)
 
 
+Started GET "/movies" for ::1 at 2024-11-01 15:21:38 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1566)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3603)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 4548)
+
+
+Started GET "/movies" for ::1 at 2024-11-01 15:23:40 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 7374)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 7472)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.1ms | Allocations: 8409)
+
+
+  
+ActionView::Template::Error (undefined method `total_gross' for #<ActionView::Base:0x00000000011e90>
+
+      '.freeze;@output_buffer.append=( total_gross(movie) );@output_buffer.safe_append='
+                                       ^^^^^^^^^^^):
+     5:     <li>
+     6:       <strong><%= movie.title %></strong>
+     7:       (<%= movie.rating %>):
+     8:       <%= total_gross(movie) %>
+     9:     </li>
+    10:     <p>
+    11:       <%= truncate(movie.description, length: 40, separator: '') %>
+  
+app/views/movies/index.html.erb:8
+app/views/movies/index.html.erb:4
+Started GET "/movies" for ::1 at 2024-11-01 15:23:48 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3425)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4377)
+
+
+Started GET "/movies" for ::1 at 2024-11-01 15:24:06 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 5156)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5241)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms | Allocations: 6157)
+
+
+  
+ActionView::Template::Error (undefined method `total_gross' for #<ActionView::Base:0x00000000012278>
+
+      '.freeze;@output_buffer.append=( total_gross(movie) );@output_buffer.safe_append='
+                                       ^^^^^^^^^^^):
+     5:     <li>
+     6:       <strong><%= movie.title %></strong>
+     7:       (<%= movie.rating %>):
+     8:       <%= total_gross(movie) %>
+     9:     </li>
+    10:     <p>
+    11:       <%= truncate(movie.description, length: 40, separator: '') %>
+  
+app/views/movies/index.html.erb:8
+app/views/movies/index.html.erb:4
+Started GET "/movies" for ::1 at 2024-11-01 15:26:17 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4838)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 21929)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.6ms | Allocations: 23242)
+
+
