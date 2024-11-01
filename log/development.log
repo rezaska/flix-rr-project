@@ -168,3 +168,15 @@ Migrating to AddFieldsToMovies (20241101180816)
   [1m[36mMovie Update (0.3ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = ?, "description" = ?, "released_on" = ? WHERE "movies"."id" = ?[0m  [["updated_at", "2024-11-01 18:14:06.555776"], ["description", "Peter Parker gets bitten by a genetically modified spider"], ["released_on", "2002-05-03"], ["id", 5]]
   [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+Started GET "/movies" for ::1 at 2024-11-01 14:15:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2888)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 19958)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 21688)
+
+
