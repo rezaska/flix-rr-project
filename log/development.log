@@ -609,3 +609,139 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 3056)
 
 
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT ?[0m  [["title", "Iron Man"], ["LIMIT", 1]]
+Started GET "/movies" for ::1 at 2024-11-01 16:55:12 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3123)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 19936)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 21256)
+
+
+Started GET "/movies" for ::1 at 2024-11-01 16:55:31 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 6713)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 6798)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 7742)
+
+
+  
+ActionView::Template::Error (undefined method `year_of' for #<Movie id: 1, title: "Iron Man", rating: "PG-13", total_gross: 0.585366247e9, created_at: "2024-10-30 14:49:43.269434000 +0000", updated_at: "2024-11-01 18:12:36.062132000 +0000", description: "Tony Stark builds an armored suit to fight the thr...", released_on: "2008-05-02">):
+    11:       <%= truncate(movie.description, length: 40, separator: '') %>
+    12:     </p>
+    13:     <p>
+    14:       <%= movie.year_of %>
+    15:     </p>
+    16:   <% end %>
+    17: </ul>
+  
+app/views/movies/index.html.erb:14
+app/views/movies/index.html.erb:4
+Started GET "/movies" for ::1 at 2024-11-01 16:55:47 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 6996)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7081)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms | Allocations: 7989)
+
+
+  
+ActionView::Template::Error (undefined method `releaseOn' for #<Movie id: 1, title: "Iron Man", rating: "PG-13", total_gross: 0.585366247e9, created_at: "2024-10-30 14:49:43.269434000 +0000", updated_at: "2024-11-01 18:12:36.062132000 +0000", description: "Tony Stark builds an armored suit to fight the thr...", released_on: "2008-05-02">
+Did you mean?  released_on
+               released_on?
+               released_on=):
+    11:       <%= truncate(movie.description, length: 40, separator: '') %>
+    12:     </p>
+    13:     <p>
+    14:       <%= movie.year_of(movie.releaseOn) %>
+    15:     </p>
+    16:   <% end %>
+    17: </ul>
+  
+app/views/movies/index.html.erb:14
+app/views/movies/index.html.erb:4
+Started GET "/movies" for ::1 at 2024-11-01 16:56:01 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 5679)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 5764)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms | Allocations: 6672)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `released_on' for #<ActionView::Base:0x00000000043418>
+
+      '.freeze;@output_buffer.append=( movie.year_of(released_on) );@output_buffer.safe_append='
+                                                     ^^^^^^^^^^^):
+    11:       <%= truncate(movie.description, length: 40, separator: '') %>
+    12:     </p>
+    13:     <p>
+    14:       <%= movie.year_of(released_on) %>
+    15:     </p>
+    16:   <% end %>
+    17: </ul>
+  
+app/views/movies/index.html.erb:14
+app/views/movies/index.html.erb:4
+Started GET "/movies" for ::1 at 2024-11-01 16:56:18 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3391)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3476)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 4384)
+
+
+  
+ActionView::Template::Error (undefined method `released_on' for Fri, 02 May 2008:Date
+
+    movie.released_on.strftime("%Y")
+         ^^^^^^^^^^^^):
+    11:       <%= truncate(movie.description, length: 40, separator: '') %>
+    12:     </p>
+    13:     <p>
+    14:       <%= year_of(movie.released_on) %>
+    15:     </p>
+    16:   <% end %>
+    17: </ul>
+  
+app/helpers/movies_helper.rb:12:in `year_of'
+app/views/movies/index.html.erb:14
+app/views/movies/index.html.erb:4
+Started GET "/movies" for ::1 at 2024-11-01 16:56:48 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3453)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4391)
+
+
+Started GET "/movies" for ::1 at 2024-11-01 16:57:31 -0400
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 3634)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 20520)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 21840)
+
+
