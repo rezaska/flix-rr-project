@@ -745,3 +745,47 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 21840)
 
 
+Started GET "/movies" for ::1 at 2024-11-04 13:42:32 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1165)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2743)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 3044)
+
+
+Started GET "/movies" for ::1 at 2024-11-04 13:42:33 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2598)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 2875)
+
+
+Started GET "/movies" for ::1 at 2024-11-04 13:43:40 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3455)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 4399)
+
+
+Started GET "/movies" for ::1 at 2024-11-04 13:45:55 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:4
+  Rendered movies/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1402)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3526)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4472)
+
+
