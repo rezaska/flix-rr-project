@@ -885,3 +885,14 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 3821ms (Views: 3814.5ms | ActiveRecord: 0.3ms | Allocations: 164086)
 
 
+Started GET "/movies" for ::1 at 2024-11-04 16:21:17 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2201)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 8242)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 9233)
+
+
