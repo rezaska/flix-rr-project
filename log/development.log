@@ -2112,3 +2112,158 @@ Processing by Rails::InfoController#routes as HTML
 Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 11172)
 
 
+Started GET "/movies" for ::1 at 2024-11-05 14:09:28 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5489)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5574)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 6483)
+
+
+  
+ActionView::Template::Error (undefined method `movie_path' for #<ActionView::Base:0x00000000037fa0>
+
+        '.freeze;@output_buffer.append=( link_to(movie.title, movie_path(movie)) );@output_buffer.safe_append='
+                                                              ^^^^^^^^^^
+Did you mean?  movies_path):
+    2:   <section class="movie">
+    3:     <div class="summary">
+    4:       <h2>
+    5:         <%= link_to(movie.title, movie_path(movie)) %>
+    6:       </h2>
+    7:       <h3>
+    8:         <%= total_gross(movie) %>
+  
+app/views/movies/index.html.erb:5
+app/views/movies/index.html.erb:1
+Started GET "/movies/1" for ::1 at 2024-11-05 14:09:44 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 6499)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 7387)
+
+
+Started GET "/movies" for ::1 at 2024-11-05 14:09:46 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 4977)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5056)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms | Allocations: 5310)
+
+
+  
+ActionView::Template::Error (undefined method `movie_path' for #<ActionView::Base:0x00000000038338>
+
+        '.freeze;@output_buffer.append=( link_to(movie.title, movie_path(movie)) );@output_buffer.safe_append='
+                                                              ^^^^^^^^^^
+Did you mean?  movies_path):
+    2:   <section class="movie">
+    3:     <div class="summary">
+    4:       <h2>
+    5:         <%= link_to(movie.title, movie_path(movie)) %>
+    6:       </h2>
+    7:       <h3>
+    8:         <%= total_gross(movie) %>
+  
+app/views/movies/index.html.erb:5
+app/views/movies/index.html.erb:1
+Started GET "/movies" for ::1 at 2024-11-05 14:10:04 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 8404)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 9318)
+
+
+Started GET "/movies" for ::1 at 2024-11-05 14:10:05 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1837)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 7383)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 7686)
+
+
+Started GET "/movies" for ::1 at 2024-11-05 14:10:09 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1837)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 7416)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 7695)
+
+
+Started GET "/rails/info/routes" for ::1 at 2024-11-05 14:10:19 -0500
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.8.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [32 times] (Duration: 4.2ms | Allocations: 5228)
+  Rendered /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.8.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.9ms | Allocations: 880)
+  Rendered /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 7.7ms | Allocations: 10062)
+  Rendered layout /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/layouts/application.html.erb (Duration: 8.0ms | Allocations: 10336)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 11167)
+
+
+Started GET "/rails/info/routes" for ::1 at 2024-11-05 14:11:34 -0500
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.8.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [32 times] (Duration: 2.2ms | Allocations: 4959)
+  Rendered /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.8.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.1ms | Allocations: 190)
+  Rendered /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 3.4ms | Allocations: 8708)
+  Rendered layout /Users/reza/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.6/lib/rails/templates/layouts/application.html.erb (Duration: 3.4ms | Allocations: 8790)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 9133)
+
+
+Started GET "/movies" for ::1 at 2024-11-05 14:12:08 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4447)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 27291)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.6ms | Allocations: 28611)
+
+
+Started GET "/movies/1" for ::1 at 2024-11-05 14:12:11 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 345)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 5907)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 7425)
+
+
+Started GET "/movies" for ::1 at 2024-11-05 14:12:14 -0500
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:1
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1837)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 7398)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 7678)
+
+
